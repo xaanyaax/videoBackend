@@ -13,7 +13,7 @@ import fs from "fs"
       try{
           if(!localFilePath) return null;
           //upload file on cloudinary
-          const response = awaitcloudinary.uploader.upload(localFilePath , {
+          const response = await cloudinary.uploader.upload(localFilePath , {
             resource_type: "auto"
           });
           //file has been uploaded sucessfully
